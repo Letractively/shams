@@ -1,6 +1,7 @@
 #summary Setting up a tapestry application.
 #labels Tapestry,Web,Java
-
+for more information see [http://tapestry.apache.org/tapestry5/tutorial1/env.html
+http://tapestry.apache.org/tapestry5/tutorial1/env.html]
 = Setting up a tapestry application =
 create a web application or web module in your IDE.
 
@@ -84,4 +85,6 @@ put this code in Start template :
 set your run options such ass application server,application context and ...
 then run application.
 
+for more information see [http://tapestry.apache.org/tapestry5/tutorial1/env.html
+http://tapestry.apache.org/tapestry5/tutorial1/env.html]
 good luck.
