@@ -34,4 +34,4 @@ in this application you can :
  using `Assets` for adding web resources to pages and components
 
 
- *download source code from [http://shams.googlecode.com/files/phonebook-src.zip]*
+ * download source code from [http://shams.googlecode.com/files/phonebook-src.zip]*
