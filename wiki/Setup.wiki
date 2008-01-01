@@ -1,4 +1,5 @@
 #summary Setting up a tapestry application.
+#labels Tapestry,Web,Java
 
 = Setting up a tapestry application =
 create a web application or web module in your IDE.
