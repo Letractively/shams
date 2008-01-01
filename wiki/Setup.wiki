@@ -13,7 +13,7 @@ add this jar file to your projects library :
  * `slf4j-api.jar`
  * `slf4j-log4j12.jar`
 
-all libraries could be found in tapestry binary zip file
+all libraries could be found in tapestry binary zip file.
 *download tapestry from this location [http://tapestry.apache.org/download.html http://tapestry.apache.org/download.html]*
 
 === Web Config (web.xml) ====
@@ -42,6 +42,7 @@ your `web.xml` most be look likes this :
 }}}
 
 - `org.myapp.mypackage` is your tapestry application root package. you can choose any package for tapestry application root package.
+
 - you may want to set your another filter name (`app`). 
 
 === Create Application Packages ===
@@ -51,7 +52,7 @@ after creating `application root package` you most create following sub packages
  * `mixins` (all mixin classes and templates most put in this package or its sub package.)
  * `services` (all services classes most put in this package or its sub package.)
 
--note that if you don't want to implement any component or mixin, you can omit `services` or `mixins` packages.-
+*note that if you don't want to implement any component,mixin or service you can omit `components`,`services` or `mixins` packages.*
 
 === Create Start Page ===
 
@@ -79,4 +80,7 @@ put this code in Start template :
 }}}
 
 === Run Application ===
-set your run options like application server and application context and run application.
+set your run options such ass application server,application context and ...
+then run application.
+
+good luck.
