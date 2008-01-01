@@ -1,4 +1,4 @@
-#summary Phone Book a simple Tapestry Application.
+#summary Phone Book is a simple Tapestry Application.
 
 == About Phone Book ==
 this application was developed in two language (English, Persian) 
