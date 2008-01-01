@@ -1,0 +1,53 @@
+#summary One-sentence summary of this page.
+#labels Tapestry,Localization,Language
+
+for more about localization see 
+[http://tapestry.apache.org/tapestry5/tapestry-core/guide/localization.html here]
+
+= Localization in Tapestry 5 =
+
+Localization is all about getting the right text to the user, in the right language.
+
+Localization support is well integrated into Tapestry. Tapestry allows you to easily seperate the text you present to your users from the rest of your application ... pull it out of your Java code and even out of your component templates. You can then translate your messages into other languages and let Tapestry put everthing together.
+
+= Hints For Localization =
+
+ * If you want to support multi languages in you application, you most add this code to your AppModule class to contribute application locales :
+{{{
+    public static void contributeApplicationDefaults(
+              MappedConfiguration<String, String> configuration) {
+
+        configuration.add("tapestry.supported-locales", "en,fa,fr");
+    }
+}}}
+
+  this example tells that three locales -English (en) , Farsi (fa) and France (fr)- most be    supported by application.
+
+ * Like most of Java applications Tapestry use Java property files for localize messages.
+ Each component and page class may have a message catalog. A message catalog is a set of     property files (PageName.properties, PageName_fr.properties...). These property files are the same format used by java.util.ResourceBundle, just lines of key=value. These files are packaged with the component's pages HTML template.
+
+ _note that message catalog name most be its page or component name_
+
+ * If the file WEB-INF/AppName.properties exists in the context, it will be used as an application-wide message catalog. The AppName is derived from the name of the filter inside the web.xml file. The search for the file is case sensitive. The properties file may be localized.
+
+ Individual pages and components can override the values defined in this message catalog. i n other word if you used a message in a component, Tapestry will search Component Message Catalog, Components Parent Message Catalog, Page Message Catalog and Application Message Catalog respectively for resolve message.
+
+ * for localize validators error messages, you most add a message catalog in *org.apache.tapestry.internal* package. this message catalog name is *ValidationMessages*
+
+ if you want to put this message catalog in other packages you most add this code to contribute application validation messages source :
+
+{{{
+ public void contributeValidationMessagesSource(Configuration<String> configuration) {
+        configuration.add("path/to/your/package/ValidationMessages.properties");
+    }
+}}}
+
+ * for access a message from a template you most use message binding prefix (message:) in template.
+{{{
+<input type="submit" value="${message:save}"/>
+...
+<h1>${message:welcome}</h1>
+}}}
+
+for more about localization see 
+[http://tapestry.apache.org/tapestry5/tapestry-core/guide/localization.html here]
