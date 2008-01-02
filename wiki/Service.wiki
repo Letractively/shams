@@ -2,12 +2,11 @@
 
 = Tapestry Services =
 Services consist of two main parts: a service interface and a service implementation.
-
 The service interface is how the service will be represented throughout the rest of the application.
 
 === Service Interface and Implementation ===
 Create an Interface (`Service.java`) in `services` package.
-define service methods in interface.
+declare service methods in interface.
 
 Create a Class (`ServiceImpl.java`) in `services` package.
 this class most implement 'Service' Interface.
