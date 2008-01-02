@@ -1,5 +1,7 @@
 #summary Writing a simple Service for your Tapestry Application.
 
+*for more about Tapestry Service go  [http://tapestry.apache.org/tapestry5/tapestry-ioc/service.html http://tapestry.apache.org/tapestry5/tapestry-ioc/service.html]*
+
 = Tapestry Services =
 Services consist of two main parts: a service interface and a service implementation.
 The service interface is how the service will be represented throughout the rest of the application.
@@ -21,7 +23,7 @@ A module class exists for the following reasons:
     * To provide explicit code for building a service
     * To set a default marker for all services defined in the module
 
-Module Class name consist of two parts : <tapestry filter name> + `Module`. This class most be in `services` package. for example if your application filter name is `myapp` your module class name most be `MyAppModule.java` or `MyappModule`(the filter name is case insensitive).
+Module Class name consist of two parts : <tapestry filter name> + `Module`. This class most be in `services` package. for example if your application filter name is `myapp` your module class name most be `MyAppModule.java` or `MyappModule.java`(the filter name is case insensitive).
  _note that application filter name was defined in `web.xml`._ 
 
  put this code in your `AppModule` class :
@@ -39,3 +41,7 @@ Module Class name consist of two parts : <tapestry filter name> + `Module`. This
 }}}
 
  after this you can use `service` and call its methods in your page
+
+*for more about Tapestry Service go  [http://tapestry.apache.org/tapestry5/tapestry-ioc/service.html http://tapestry.apache.org/tapestry5/tapestry-ioc/service.html]*
+
+good luck.
