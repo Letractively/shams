@@ -61,6 +61,6 @@ all pages that you want to have layout most be like this :
 
 {{{
 <span t:type="layout" t:title="literal:PageTitle" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
-Here is Page Content...
+  Page Content goes here...
 </span>
 }}}
