@@ -10,7 +10,7 @@ Each Tapestry component has its Java class and optionally its Template and Messa
 There is no need to tapestry components extend from special classes.
 
 === Create Layout Template ===
-after Setting Up your Tapestry Application Environment (see my [http://code.google.com/p/shams/wiki/Setup Setup] Wiki page for Setup Tapestry Application) in your components package create a Template File (i chose `Layout.tml`
+after Setting Up your Tapestry Application Environment (see my [http://code.google.com/p/shams/wiki/Setup Setup] Wiki page for Setup Tapestry Application) in your components package create a Template File (i choose `Layout.tml` for its name)
 
 put the following code in your components template :
 {{{
