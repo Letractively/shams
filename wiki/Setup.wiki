@@ -1,4 +1,4 @@
-#summary Setting up a tapestry application.
+#summary Setting up a Tapestry Application.
 #labels Tapestry,Web,Java
 for more information see [http://tapestry.apache.org/tapestry5/tutorial1/env.html]
 = Setting up a tapestry application =
