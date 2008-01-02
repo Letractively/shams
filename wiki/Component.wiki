@@ -39,7 +39,7 @@ put the following code in your components template :
  - you see an expression (`${title}`) here for page title. you most set each page title from page template.
 
 === Create Layout Class ===
-Create a Java class in your application components package (`Layout.java`)
+Create a Java class(`Layout.java`, component class and template name most be same) in your application components package.
 put the following code in your class file :
 {{{
 
