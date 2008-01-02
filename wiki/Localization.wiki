@@ -73,3 +73,5 @@ Localization support is well integrated into Tapestry. Tapestry allows you to ea
 
 *for more about localization see 
 [http://tapestry.apache.org/tapestry5/tapestry-core/guide/localization.html http://tapestry.apache.org/tapestry5/tapestry-core/guide/localization.html]*
+
+good luck.
