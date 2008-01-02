@@ -36,10 +36,10 @@ put the following code in your components template :
 
  - you see `<t:body/>` in this template. your pages template will be go here.
 
- - we have an expression ('${title}') here for page title. we most set each page title from page template.
+ - you see an expression (`${title}`) here for page title. you most set each page title from page template.
 
 === Create Layout Class ===
-create a java class in your application components package (`Layout.java`)
+Create a Java class in your application components package (`Layout.java`)
 put the following code in your class file :
 {{{
 
