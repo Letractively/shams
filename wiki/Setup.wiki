@@ -42,9 +42,10 @@ your `web.xml` most be look likes this :
 
 }}}
 
-- `org.myapp.mypackage` is your tapestry application root package. you can choose any package for tapestry application root package.
+- `org.myapp.mypackage` is tapestry application root package. 
+you most set a package as a tapestry application root package.
 
-- you may want to set your another filter name (`app`). 
+- you may want to set another filter name (`app`). 
 
 === Create Application Packages ===
 after creating `application root package` you most create following sub packages :
