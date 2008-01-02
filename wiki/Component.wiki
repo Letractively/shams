@@ -7,7 +7,7 @@ Suppose that you want to have same `footer` , `header` and `menubar` for all or 
 === About Tapestry Components ===
 Each Tapestry component has its Java class and optionally its Template and Message Catalogs. component class, template and message catalogs most be put in `components` package or its sub packages.
 
-There is no need to tapestry components extend from special classes.
+There is no need to tapestry components extend from special class.
 
 === Create Layout Template ===
 after Setting Up your Tapestry Application Environment (see my [http://code.google.com/p/shams/wiki/Setup Setup] Wiki page for Setup Tapestry Application) in your components package create a Template File (i choose `Layout.tml` for its name)
@@ -35,7 +35,8 @@ put the following code in your components template :
 }}}
 
  - you see `<t:body/>` in this template. your pages template will be go here.
- - we have an expression ('${title}') here for page title. we most set each page title from pages template.
+
+ - we have an expression ('${title}') here for page title. we most set each page title from page template.
 
 === Create Layout Class ===
 create a java class in your application components package (`Layout.java`)
