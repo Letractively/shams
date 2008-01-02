@@ -1,4 +1,4 @@
-#summary writing a simple service for your tapestry applications.
+#summary Writing a simple Service for your Tapestry Application.
 
 = Tapestry Services =
 Services consist of two main parts: a service interface and a service implementation.
@@ -21,7 +21,7 @@ A module class exists for the following reasons:
     * To provide explicit code for building a service
     * To set a default marker for all services defined in the module
 
-Module Class name consist of two parts : <tapestry filter name> + `Module` and most be in `services` package. for example if your application filter name is `myapp` your module class name most be `MyAppModule.java` or `MyappModule`(the filter name is case insensitive).
+Module Class name consist of two parts : <tapestry filter name> + `Module`. This class most be in `services` package. for example if your application filter name is `myapp` your module class name most be `MyAppModule.java` or `MyappModule`(the filter name is case insensitive).
  _note that application filter name was defined in `web.xml`._ 
 
  put this code in your `AppModule` class :
