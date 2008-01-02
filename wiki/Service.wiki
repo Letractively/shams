@@ -1,4 +1,5 @@
 #summary Writing a simple Service for your Tapestry Application.
+#labels Tapestry,Service,Ioc
 
 *for more about Tapestry Service go  [http://tapestry.apache.org/tapestry5/tapestry-ioc/service.html http://tapestry.apache.org/tapestry5/tapestry-ioc/service.html]*
 
