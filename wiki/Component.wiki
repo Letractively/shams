@@ -1,13 +1,66 @@
-#summary writing simple components in tapestry applications.
+#summary writing a simple component for page layout.
 
-= Introduction =
+= Web Page Layout =
 
-Add your content here.
+Suppose that you want to have same `footer` , `header` and `menubar` for all or a group of pages in your web application. in this case you can simply develop a Layout Component and set it as a container for application pages.
 
+=== About Tapestry Components ===
+Each Tapestry component has its Java class and optionally its Template and Message Catalogs. component class, template and message catalogs most be put in `components` package or its sub packages.
 
-= Details =
+There is no need to tapestry components extend from special classes.
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+=== Create Layout Template ===
+after Setting Up your Tapestry Application Environment (see my [http://code.google.com/p/shams/wiki/Setup Setup] Wiki page for Setup Tapestry Application) in your components package create a Template File (i chose `Layout.tml`
+
+put the following code in your components template :
+{{{
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+<head>
+    <title>${title}</title>
+</head>
+<body>
+<div id="header-div">
+    <h2> My Application Header</h2>
+    <hr/>
+</div>
+<div id="body-div">
+    <t:body/>
+</div>
+<div id="footer-div">
+    <hr/>
+    copyright 2000-2007 ...
+</div>
+</body>
+</html>
+}}}
+
+ - you see `<t:body/>` in this template. your pages template will be go here.
+ - we have an expression ('${title}') here for page title. we most set each page title from pages template.
+
+=== Create Layout Class ===
+create a java class in your application components package (`Layout.java`)
+put the following code in your class file :
+{{{
+
+    @Parameter(required = true)
+    private String title;
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+}}}
+
+ - the `@Parameter` annotation say that `title` is a parameter, this parameter is mandatory (`required=true`). you most have setter and getter for change or access value of this parameter from pages and component template.
+
+== Change The Page Templates ==
+all pages that you want to have layout most be like this :
+
+{{{
+<span t:type="layout" t:title="literal:PageTitle" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+Here is Page Content...
+</span>
+}}}
