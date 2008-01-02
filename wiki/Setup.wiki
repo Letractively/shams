@@ -54,7 +54,7 @@ after creating `application root package` you most create following sub packages
  * `mixins` (all mixin classes and templates most put in this package or its sub package.)
  * `services` (all services classes most put in this package or its sub package.)
 
-*note that if you don't want to implement any component,mixin or service you can omit `components`,`services` or `mixins` packages.*
+*note that if you don't want to implement any component,mixin or service you can omit `components` , `services` or `mixins` packages.*
 
 === Create Start Page ===
 
