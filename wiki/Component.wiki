@@ -1,4 +1,5 @@
 #summary writing a simple component for page layout.
+*for more about Tapestry Components go [http://tapestry.apache.org/tapestry5/tapestry-core/ http://tapestry.apache.org/tapestry5/tapestry-core/]*
 
 = Web Page Layout =
 
@@ -65,3 +66,7 @@ all pages that you want to have layout most be like this :
   Page Content goes here...
 </span>
 }}}
+
+*for more about Tapestry Components go [http://tapestry.apache.org/tapestry5/tapestry-core/ http://tapestry.apache.org/tapestry5/tapestry-core/]*
+
+good luck.
