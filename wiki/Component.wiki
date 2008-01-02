@@ -1,4 +1,5 @@
 #summary writing a simple component for page layout.
+#labels Tapestry,Web,Component,Template,Layout
 *for more about Tapestry Components go [http://tapestry.apache.org/tapestry5/tapestry-core/ http://tapestry.apache.org/tapestry5/tapestry-core/]*
 
 = Web Page Layout =
