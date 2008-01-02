@@ -55,7 +55,7 @@ put the following code in your class file :
     }
 }}}
 
- - the `@Parameter` annotation say that `title` is a parameter, this parameter is mandatory (`required=true`). you most have setter and getter for change or access value of this parameter from pages and component template.
+ - the `@Parameter` annotation indicate that `title` is a parameter and this parameter is mandatory (`required=true`). you most write setter and getter for change or access value of this parameter from pages and component template.
 
 == Change The Page Templates ==
 all pages that you want to have layout most be like this :
