@@ -1,5 +1,5 @@
 #summary Localization in Tapestry 5.
-#labels Tapestry,Localization,Language
+#labels Featured,Language
 
 *for more about localization see [http://tapestry.apache.org/tapestry5/tapestry-core/guide/localization.html http://tapestry.apache.org/tapestry5/tapestry-core/guide/localization.html]*
 
