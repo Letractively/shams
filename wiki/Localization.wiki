@@ -65,7 +65,7 @@ Localization support is well integrated into Tapestry. Tapestry allows you to ea
         if ("fr".equalsIgnoreCase(localeService.get().getLanguage())) {
             localeService.set(new Locale("en"));
         } else {
-            localeService.set(new Locale("en"));
+            localeService.set(new Locale("fr"));
         }
     }
 
