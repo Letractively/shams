@@ -1,4 +1,5 @@
 #summary Phone Book is a simple Tapestry Application.
+#labels Featured
 
 == About Phone Book ==
  * this application was developed and tested with `Tapestry 5.0.7`.
