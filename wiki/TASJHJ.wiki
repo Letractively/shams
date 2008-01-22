@@ -1,4 +1,5 @@
 #summary Tapestry Spring Hibernate JPA JDBC all in one.
+#labels Featured
 
 = New Release Features  =
 In this release i used :
@@ -35,7 +36,7 @@ In this release i used :
 }}}
 
 = Database Config =
- Lets have a look at database.properties 
+ Lets have a look at `database.properties`
  {{{
     driverClassName=org.hsqldb.jdbcDriver
     url=jdbc:hsqldb:file:E:/new-projects/t5m/phb/phbdb
