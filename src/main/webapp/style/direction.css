@@ -1,0 +1,33 @@
+body {
+    margin-left: 100px;
+    direction:ltr;
+}
+
+div#menu-div {
+    float: left;
+}
+
+div#body-div {
+    margin-left: 150px;
+}
+
+ul.insert li {
+    padding-right: 20px;
+}
+
+ul.insert li input {
+    padding-left: 10px;
+}
+
+ul.item {
+    text-align:left;    
+}
+
+li.quick-link {
+    text-align:right;
+}
+
+.app-headbar {
+    float: right;
+}
+

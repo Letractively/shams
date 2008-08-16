@@ -1,0 +1,42 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+<head>
+    <title>${title}</title>
+</head>
+<body>
+<div id="header-div">
+    <div id="faravahar"><img src="${asset:context:}/image/faravahar.png"/></div>
+    <span id="app-title">${message:app.title} </span> <span> >>> ${title}</span>
+    <span class="app-headbar">
+        <t:if test="authenticated">
+            <span>[ ${message:app.welcome.user} ${loginName}] </span>
+            <a t:type="actionlink" t:id="logout">[ ${message:app.logout} ]</a>
+        </t:if>
+        <a t:type="actionlink" t:id="locale">[ ${message:app.locale} ]</a>
+     </span>
+    <hr/>
+</div>
+<t:if test="authenticated">
+    <div id="menu-div">
+        <ul>
+            <li class="${homeCss}">
+                <a t:type="actionlink" t:id="start" context="literal:Home">${message:app.welcome}</a>
+            </li>
+            <li class="${listCss}">
+                <a t:type="actionlink" t:id="list" context="literal:List">${message:app.list}</a>
+            </li>
+            <li class="${insertCss}">
+                <a t:type="actionlink" t:id="insert" context="literal:Insert">${message:app.new}</a>
+            </li>
+        </ul>
+    </div>
+</t:if>
+
+<div id="body-div">
+    <t:body/>
+</div>
+<div id="footer-div">
+    <hr/>
+    ${message:app.copyright}
+</div>
+</body>
+</html>

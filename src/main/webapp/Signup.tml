@@ -1,0 +1,43 @@
+<t:layout t:title="message:title" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+    <div class="login">
+        <t:form t:id="signup">
+            <t:if test="duplicate">
+                <span class="login-failed">${message:duplicate.username}</span>
+            </t:if>
+            <t:if test="notmatched">
+                <span class="login-failed">${message:confirm.not.matched}</span>
+            </t:if>
+            <ul>
+                <li>
+                    <t:label for="loginName"/>
+                </li>
+                <li>
+                    <t:textfield t:id="loginName" t:vlidate="required" value="user.name" t:validate="required"/>
+                </li>
+                <li>
+                    <t:label for="loginUsername"/>
+                </li>
+                <li>
+                    <t:textfield t:id="loginUsername" t:vlidate="required" value="user.username" t:validate="required"/>
+                </li>
+                <li>
+                    <t:label for="loginPassword"/>
+                </li>
+                <li>
+                    <t:passwordfield t:id="loginPassword" t:vlidate="required" value="user.password"
+                                     t:validate="required"/>
+                </li>
+                <li>
+                    <t:label for="loginConfirm"/>
+                </li>
+                <li>
+                    <t:passwordfield t:id="loginConfirm" t:vlidate="required" value="confirm" t:validate="required"/>
+                </li>
+                <li>
+                    <input type="submit" value="${message:signup}"/>
+                    <input type="button" value="${message:cancel}" onclick="location.href='start';"/>
+                </li>
+            </ul>
+        </t:form>
+    </div>
+</t:layout>

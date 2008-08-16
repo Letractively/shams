@@ -1,0 +1,30 @@
+<t:layout t:title="message:title" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+    <div class="login">
+        <t:form t:id="login">
+            <div class="message">
+                ${message:signin.or.signup} <t:pagelink t:page="Signup">${message:here}</t:pagelink>
+                ${message:create.new.user}
+            </div>
+            <t:if test="failed">
+                <span class="login-failed">${message:login.failed}</span>
+            </t:if>
+            <ul>
+                <li>
+                    <t:label for="loginUsername"/>
+                </li>
+                <li>
+                    <t:textfield t:id="loginUsername" value="username" t:validate="required"/>
+                </li>
+                <li>
+                    <t:label for="loginPassword"/>
+                </li>
+                <li>
+                    <t:passwordfield t:id="loginPassword" value="password" t:validate="required"/>
+                </li>
+                <li>
+                    <input type="submit" value="${message:login}"/>
+                </li>
+            </ul>
+        </t:form>
+    </div>
+</t:layout>
