@@ -1,0 +1,31 @@
+<t:layout t:title="message:title" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+    <script type="text/javascript">
+        function confirm4delete() {
+            return confirm("${message:confirm.delete}");
+        }
+    </script>
+
+    <t:form>
+        <div class="search">
+        <input t:type="textfield" value="searchItem" t:validate="minlength=1"/> <input t:type="submit" value="${message:search} >>"/>
+        </div>
+    </t:form>
+
+    <table id="list" cellpadding="0" cellspacing="0">
+        <tr t:type="loop" t:source="items" t:value="item" >
+            <td>
+                <ul class="item">
+                    <li class="item-name">${item.firstName} ${item.lastName}</li>
+                    <li>${item.mail}</li>
+                    <li>${item.phone} , ${item.mobile}</li>
+                    <li>${item.address}</li>
+                    <li class="quick-link">
+                        <a t:type="actionlink" t:id="view" t:context="item.id">${message:view}</a>
+                        <a t:type="actionlink" t:id="edit" t:context="item.id">${message:edit}</a>
+                        <a t:type="actionlink" t:id="delete" t:context="item.id" onclick="return confirm4delete()">${message:delete}</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</t:layout>

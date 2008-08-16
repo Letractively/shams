@@ -1,0 +1,32 @@
+<t:layout t:title="message:title" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+    <h3>About Phone Book</h3>
+
+    <p>
+        The Phone Book is a simple web application for :
+        <br/>
+        <br/> - Test and Use Tapestry 5 Components, Templates and Localization.
+        <br/> - Tapestry 5 Spring Framework Integration.
+        <br/> - Tapestry 5 And Acegi Security System Integration.
+        <br/> - Tapestry 5 + Spring + (JPA, Hibernate, Spring JDBC) combination.
+        <br/>
+        <br/><span id="note">Please note that this product is free and with no warranty.</span>
+    </p>
+
+    <h3>About IRAN (from wikipedia)</h3>
+
+    <p id="iran">
+        Iran, (Persian: ايران,[ʔiˈɾɒn] (help·info) ĭrănˈ), formerly known internationally as Persia until 1935, is a
+        country in Central Eurasia.
+        <br/>Located in the heart of the Persian Gulf, an important oil-producing area, Iran is bounded by the Gulf of
+        Oman to its south-east and the Caspian Sea to its north.
+        <br/>The 18th largest country in the world in terms of area at 1,648,195 km², Iran has a population of over
+        seventy million.
+        <br/>Iran borders Armenia, Azerbaijan, Turkmenistan, Kazakhstan and Russia to the north, Afghanistan and
+        Pakistan to the east, and Turkey and Iraq to the west.
+        <br/>Persian is the official language. Islam, Zoroastrianism, Christianity and Juwish are populare religions.
+        <br/>Iran is home to one of the world's oldest continuous major civilizations, with historical and urban
+        settlements dating back to 4000 BCE.
+        <br/>The name Iran is a cognate of Aryan, and means "Land of the Aryans"."Land of Kindness" (سرزمين مهر) is used
+        as an alternative name for Iran in Persian literature and Iranian media.
+    </p>
+</t:layout>

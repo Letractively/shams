@@ -1,0 +1,12 @@
+<t:layout t:title="message:title" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+    <t:form t:id="insert">
+        <t:errors/>
+        <ul class="insert">
+        <t:itempanel t:item="item" />
+        <li class="buttons">
+            <input type="submit" value="${message:save}"/>
+            <input type="button" value="${message:cancel}" onclick="location.href='list';"/>
+        </li>
+        </ul>
+    </t:form>
+</t:layout>

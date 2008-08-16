@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+                           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+
+    <!-- Spring Hibernate applicatioin context -->
+
+    <context:property-placeholder location="classpath:org/shams/phonebook/config/database.properties" />
+
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"
+          p:driverClassName="${driverClassName}"
+          p:url="${url}"
+          p:username="${username}"
+          p:password="${password}"/>
+
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean"
+          p:dataSource-ref="dataSource"
+          p:annotatedClasses="org.shams.phonebook.domain.impl.User, org.shams.phonebook.domain.impl.Item">
+        <property name="hibernateProperties">
+            <value>
+                hibernate.dialect=org.hibernate.dialect.HSQLDialect
+                hibernate.show_sql=true
+            </value>
+        </property>
+    </bean>
+
+    <bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager"
+          p:sessionFactory-ref="sessionFactory" p:dataSource-ref="dataSource"/>
+
+    <tx:advice id="txAdvice" transaction-manager="txManager">
+        <tx:attributes>
+            <tx:method name="load*" read-only="true"/>
+            <tx:method name="*"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <aop:config>
+        <aop:pointcut id="allServiceOperation" expression="execution(* org.shams.phonebook.service.*Service.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="allServiceOperation"/>
+    </aop:config>
+
+    <aop:config>
+        <aop:pointcut id="allDaoOperation" expression="execution(* org.shams.phonebook.dao..*DaoImpl.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="allDaoOperation"/>
+    </aop:config>
+
+    <bean id="dao" class="org.shams.phonebook.dao.impl.hibernate.DaoImpl" abstract="true"
+          p:sessionFactory-ref="sessionFactory"/>
+    <bean id="itemDao" class="org.shams.phonebook.dao.impl.hibernate.ItemDaoImpl" parent="dao"/>
+    <bean id="userDao" class="org.shams.phonebook.dao.impl.hibernate.UserDaoImpl" parent="dao"/>
+
+    <bean name="itemService" class="org.shams.phonebook.service.impl.ItemServiceImpl" p:itemDao-ref="itemDao"/>
+    <bean id="securityService" class="org.shams.phonebook.service.impl.SecurityServiceImpl" p:userDao-ref="userDao"/>
+</beans>

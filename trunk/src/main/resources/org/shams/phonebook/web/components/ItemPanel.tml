@@ -1,0 +1,38 @@
+<t:container xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+    <li>
+        <t:label for="itemFirstName"/>
+    </li>
+    <li>
+        <t:textfield t:id="itemFirstName" t:value="item.firstName" t:validate="required" readonly="${readonly}" class="required" />
+    </li>
+    <li>
+        <t:label for="itemLastName"/>
+    </li>
+    <li>
+        <t:textfield t:id="itemLastName" t:value="item.lastName" t:validate="required" readonly="${readonly}" class="required"/>
+    </li>
+    <li>
+        <t:label for="itemPhone"/>
+    </li>
+    <li>
+        <t:textfield t:id="itemPhone" t:value="item.phone" t:validate="required,maxlength=11" readonly="${readonly}" class="required"/>
+    </li>
+    <li>
+        <t:label for="itemMobile"/>
+    </li>
+    <li>
+        <t:textfield t:id="itemMobile" t:value="item.mobile" t:validate="minlength=1" readonly="${readonly}"/>
+    </li>
+    <li>
+        <t:label for="itemEmail"/>
+    </li>
+    <li>
+        <t:textfield t:id="itemEmail" t:value="item.mail" t:validate="minlength=1" readonly="${readonly}"/>
+    </li>
+    <li>
+        <t:label for="itemAddress"/>
+    </li>
+    <li>
+        <t:textarea t:id="itemAddress" t:value="item.address" t:validate="minlength=1" readonly="${readonly}"/>
+    </li>
+</t:container>
