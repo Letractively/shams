@@ -13,13 +13,7 @@
 
     <!-- Spring Hibernate applicatioin context -->
 
-    <context:property-placeholder location="classpath:org/shams/phonebook/config/database.properties" />
-
-    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"
-          p:driverClassName="${driverClassName}"
-          p:url="${url}"
-          p:username="${username}"
-          p:password="${password}"/>
+    <import resource="application-context.xml"/>
 
     <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean"
           p:dataSource-ref="dataSource"

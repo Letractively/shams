@@ -13,13 +13,7 @@
 
     <!-- Spring JPA (Hibernate Implementaion) applicatioin context -->
 
-    <context:property-placeholder location="classpath:org/shams/phonebook/config/database.properties"/>
-
-    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"
-          p:driverClassName="${driverClassName}"
-          p:url="${url}"
-          p:username="${username}"
-          p:password="${password}"/>
+    <import resource="application-context.xml"/>
 
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
           p:persistenceUnitName="Spring.Persistence" p:dataSource-ref="dataSource" p:jpaVendorAdapter-ref="jpaAdapter"/>

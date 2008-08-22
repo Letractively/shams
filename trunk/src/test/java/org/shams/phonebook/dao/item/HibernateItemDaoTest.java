@@ -9,7 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
  * @auther <a href="mailto:m.h.shams@gmail.com"> M. H. Shamsi </a>
  */
 @ContextConfiguration(locations = {"classpath:org/shams/phonebook/config/hibernate-application-context.xml"})
-public class HibernatetemDaoTest extends BaseItemDaoTest {
+public class HibernateItemDaoTest extends BaseItemDaoTest {
 
     @Test
     public void save() {
