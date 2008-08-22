@@ -1,11 +1,10 @@
 package org.shams.phonebook.dao.user;
 
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
+import org.junit.*;
 import org.junit.runner.RunWith;
 import org.shams.phonebook.dao.UserDao;
 import org.shams.phonebook.domain.impl.User;
+import org.shams.phonebook.utils.DataBaseUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -22,19 +21,11 @@ public abstract class BaseUserDaoTest extends AbstractTransactionalJUnit4SpringC
     @Autowired
     private UserDao dao;
 
-    @Before
-    public void init() throws Exception {
-        deleteFromTables("_user");
-    }
-
-    @After
-    public void destroy() throws Exception {
-        deleteFromTables("_user");
-    }
-
     public void save() {
+        int before = countRowsInTable("_user");
         dao.save(getUser());
-        Assert.assertEquals(countRowsInTable("_user"), 1);
+        int after = countRowsInTable("_user");
+        Assert.assertEquals(after, before + 1);
     }
 
     public void duplicate() {
